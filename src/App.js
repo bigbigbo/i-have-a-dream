@@ -1,7 +1,7 @@
 import { h, render, Component, Fragment, Color, Bold, Underline } from "ink";
 
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
+import Home from "./pages/home";
+import NotFound from "./pages/not-found";
 
 const routeConfig = [
     {
@@ -21,8 +21,9 @@ function renderRoute(path, ctx) {
         return <NotFound history={history} />;
     }
 
-    const Route = props => {
-        return <routeConf.component {...props} history={history} />;
+    // TODO: yargs作参数解析
+    const Route = () => {
+        return <routeConf.component history={history} />;
     };
 
     return <Route />;
@@ -39,6 +40,7 @@ class App extends Component {
 
     render() {
         const { currentUrl } = this.state;
+
         return <Fragment>{renderRoute(currentUrl, this)}</Fragment>;
     }
 }
