@@ -1,0 +1,42 @@
+{
+  "name": "i-have-a-dream",
+  "version": "0.1.0",
+  "description": "I have a dream that a sweat dream.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rimraf lib && babel src -d lib",
+    "start": "npm run build && node lib/index.js"
+  },
+  "keywords": [
+    "react",
+    "ink",
+    "cmd"
+  ],
+  "bin": {
+    "dream": "lib/index.js"
+  },
+  "author": "bigbigbo",
+  "license": "ISC",
+  "dependencies": {
+    "ink": "^0.5.1",
+    "ink-big-text": "^0.3.0",
+    "ink-box": "^0.1.0",
+    "ink-divider": "^1.1.1",
+    "ink-gradient": "^0.1.1",
+    "ink-router": "^0.6.0",
+    "ink-select-input": "^2.0.0",
+    "ink-spinner": "^2.0.0",
+    "ink-table": "^1.0.3",
+    "ink-text-animation": "^0.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-react-jsx": "^7.1.6",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/runtime": "^7.1.5",
+    "rimraf": "^2.6.2"
+  }
+}
